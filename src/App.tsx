@@ -1,48 +1,10 @@
-import { useState } from 'react';
+import React from "react";
 
-function App() {
-  const [status, setStatus] = useState('');
-
-  const handleMint = async () => {
-    setStatus('⏳ Minting...');
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      setStatus('✅ Token Minted (Simulated)');
-    } catch (error) {
-      console.error(error);
-      setStatus('❌ Mint Failed');
-    }
-  };
-
+export default function App() {
   return (
-    <div style={{
-      fontFamily: 'sans-serif',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '100vh',
-      textAlign: 'center',
-      padding: '2rem'
-    }}>
-      <img src="/solopass-logo.png" alt="SoloPass Logo" style={{ width: 80, marginBottom: 16 }} />
-      <h1>🚀 Mint Smart Token (Log2 Edition)</h1>
-      <p>This is the upgraded version of our smart token mint demo.</p>
-      <button onClick={handleMint} style={{
-        marginTop: 20,
-        padding: '12px 24px',
-        fontSize: '16px',
-        borderRadius: '8px',
-        border: 'none',
-        backgroundColor: '#333',
-        color: 'white',
-        cursor: 'pointer'
-      }}>
-        Mint Token
-      </button>
-      {status && <p style={{ marginTop: 20 }}>{status}</p>}
+    <div style={{ padding: "2rem", fontFamily: "monospace", background: "black", color: "lime" }}>
+      <h1 style={{ fontSize: "2rem" }}>🚀 FRESH PUSH FROM LOG2 (Vercel Confirm)</h1>
+      <p>This is a live test to confirm Vercel is picking up new changes.</p>
     </div>
   );
 }
-
-export default App;
