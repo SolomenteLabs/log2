@@ -6,7 +6,6 @@ function App() {
   const handleMint = async () => {
     setStatus('⏳ Minting...');
     try {
-      // Simulated delay to mimic transaction
       await new Promise((resolve) => setTimeout(resolve, 2000));
       setStatus('✅ Token Minted (Simulated)');
     } catch (error) {
@@ -27,8 +26,8 @@ function App() {
       padding: '2rem'
     }}>
       <img src="/solopass-logo.png" alt="SoloPass Logo" style={{ width: 80, marginBottom: 16 }} />
-      <h1>Mint SoloPass Token (Live Log)</h1>
-      <p>This is a testnet-only smart token mint demo.</p>
+      <h1>🚀 Mint Smart Token (Log2 Edition)</h1>
+      <p>This is the upgraded version of our smart token mint demo.</p>
       <button onClick={handleMint} style={{
         marginTop: 20,
         padding: '12px 24px',
